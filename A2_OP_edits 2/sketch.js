@@ -76,7 +76,7 @@ function draw() {
 function sendTheMessage() {
   if (answerInput.value() != "") {
     answer = answerInput.value();
-    window.location.href = "/../_pageTwo/index.html?answer="+answer; 
+    window.location.href = "https://jeni00.github.io/_pageTwo/index.html?answer="+answer; 
   } else {
     window.alert ("Please tell me your opinion on the subject. Let's see if we hold the same point of view.");
 
