@@ -99,7 +99,7 @@ function draw() {
 }
 
 function gotolink() {
-	window.open('http://127.0.0.1:5500/');
+	window.open('https://jeni00.github.io/');
 }
 
   // PubNub logic below
