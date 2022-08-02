@@ -93,7 +93,7 @@ function drawMessages(messageHistory) {
       messageTime = convertTime(messageHistory[i].timetoken);
 
 
-    if (messageHistory[i].message === "Home") {
+    if (messageHistory[i].message === "UserA") {
 
      
       noStroke(0);
@@ -107,7 +107,7 @@ function drawMessages(messageHistory) {
       text(messageHistory[i].message.messageText, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+5);
       text(messageTime, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+15);
 
-    } else if ((messageHistory[i].message === "School")) {
+    } else if ((messageHistory[i].message === "UserB")) {
       
       noStroke(0);
       ellipse(20 + windowWidth/2,  (windowHeight - 20)*(i+1), 50);
