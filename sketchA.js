@@ -76,6 +76,7 @@ function setup() {
 
 } else {
   noParams = true;
+  window.location.href='index2.html';
 }
 
 console.log("message = " + message);
@@ -115,7 +116,9 @@ function sendTheMessage() {
     },
   });
   sendText.value("");
+  window.location.href='index2.html';
 }
+
 
 function readIncoming(inMessage) {
   console.log(inMessage);
