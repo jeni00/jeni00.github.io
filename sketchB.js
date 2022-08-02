@@ -75,7 +75,6 @@ console.log("fetching");
     },
     (status, response) => {
       console.log(status);
-      console.log(response.channels.NFCs);
       drawMessages(response.channels.NFCs);
     }
   );
