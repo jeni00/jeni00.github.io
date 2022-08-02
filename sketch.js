@@ -22,7 +22,24 @@ let NFC2 = url.searchParams.get("NFC2");
 console.log("NFC TAG 1 = " + NFC1);
 console.log("NFC TAG 2 = " + NFC2);
 
-if (NFC1 != null) {
+function preload() { 
+
+  // logic to create a random UUID
+    you = random(0,1000000); 
+    console.log(you);
+    you = int(you);
+    console.log(you);
+    you = you.toString();
+  
+}
+
+
+function setup() {
+
+    createCanvas(windowWidth, windowHeight);
+    fill(255,247,253);
+  
+  if (NFC1 != null) {
   
   background (color(201, 175, 196));
 
@@ -63,23 +80,6 @@ if (NFC1 != null) {
 
 console.log("message = " + message);
 
-
-function preload() { 
-
-  // logic to create a random UUID
-    you = random(0,1000000); 
-    console.log(you);
-    you = int(you);
-    console.log(you);
-    you = you.toString();
-  
-}
-
-
-function setup() {
-
-    createCanvas(windowWidth, windowHeight);
-    fill(255,247,253);
 
     dataServer = new PubNub({
       subscribeKey: subKey,
