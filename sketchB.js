@@ -139,14 +139,7 @@ function drawMessages(messageHistory) {
 }
   // PubNub logic below
 function sendTheMessage() {
-  // Send Data to the server to draw it in all other canvases
-  
-  dataServer.publish({
-    channel: channelName,
-    message: {
-      messageText: sendText.value()
-    },
-  });
+ 
   sendText.value("");
 }
 
