@@ -93,18 +93,6 @@ console.log("message = " + message);
 
     dataServer.subscribe({ channels: [channelName] });
     dataServer.addListener({ message: readIncoming });
-   
-    textAlign(CENTER);
-    textSize(40);
-    if (noParams == false) {
-      sendTheMessage();
-    } else {
-      fetchMessages();
-      noStroke();
-      fill(201, 175, 196);
-      text("UserA", windowWidth*0.25, windowHeight/2);
-      fill(197, 220, 210);
-      text("UserB", windowWidth*0.75, windowHeight/2);
 
     }
     
@@ -114,78 +102,8 @@ function draw() {
 
   
 }
-/*
-function mousePressed() {
-
-fetchMessages();
 
 
-}
-*/
-function fetchMessages() {
-
-console.log("fetching");
-
-  dataServer.fetchMessages(
-    {
-        channels: [channelName],
-        end: '15343325004275466',
-        count: 100
-    },
-    (status, response) => {
-      console.log(status);
-      console.log(response.channels.NFCs);
-      drawMessages(response.channels.NFCs);
-    }
-  );
-   
-}
-
-function drawMessages(messageHistory) {
-
-  console.log("in draw messages");
-
-  console.log(messageHistory);
-  
-  for (let i = 0; i < messageHistory.length; i++) {
-      console.log(messageHistory[i]);
-      messageTime = convertTime(messageHistory[i].timetoken);
-
-
-    if (messageHistory[i].message === "Home") {
-
-     
-      noStroke(0);
-      ellipse((windowWidth/2) - 20, (windowHeight - 20)*(i+1), 50);
-      fill(218, 184, 224);
-
-      console.log(messageHistory[i]);
-      textSize(20);
-      textAlign(CENTER);
-      fill(131, 123, 126);
-      text(messageHistory[i].message.messageText, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+5);
-      text(messageTime, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+15);
-
-    } else if ((messageHistory[i].message === "School")) {
-      
-      noStroke(0);
-      ellipse(20 + windowWidth/2,  (windowHeight - 20)*(i+1), 50);
-      fill(206, 242, 216);
-
-
-      console.log(messageHistory[i]);
-      textSize(20);
-      textAlign(CENTER);
-      fill(131, 123, 126);
-      text(messageHistory[i].message.messageText, (windowWidth/2) + 20, ((windowHeight - 20)*(i-1))+5);
-      text(messageTime, (windowWidth/2) + 20, ((windowHeight - 20)*(i-1))+15);
-
-    } 
-  
-
-  }
-
-}
   // PubNub logic below
 function sendTheMessage() {
   // Send Data to the server to draw it in all other canvases
@@ -201,7 +119,6 @@ function sendTheMessage() {
 
 function readIncoming(inMessage) {
   console.log(inMessage);
-  fetchMessages();
 }
 
 function convertTime(original_timetoken) {
