@@ -95,7 +95,6 @@ console.log("message = " + message);
     dataServer.subscribe({ channels: [channelName] });
     dataServer.addListener({ message: readIncoming });
 
-    }
     
 }
   
