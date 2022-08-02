@@ -23,8 +23,8 @@ console.log("NFC TAG 1 = " + NFC1);
 console.log("NFC TAG 2 = " + NFC2);
 
 if (NFC1 != null) {
-  createCanvas(windowWidth, windowHeight);
-  fill(201, 175, 196);
+  
+  background(201, 175, 196);
 
   textAlign(CENTER);
   textSize(20);
@@ -41,8 +41,8 @@ if (NFC1 != null) {
 
 
 } else if (NFC2 != null) {
-  createCanvas(windowWidth, windowHeight);
-  fill(197, 220, 210);
+  
+  background(197, 220, 210);
 
   textAlign(CENTER);
   textSize(20);
@@ -79,7 +79,7 @@ function preload() {
 function setup() {
 
     createCanvas(windowWidth, windowHeight);
-    fill(255,247,253)
+    fill(255,247,253);
 
     dataServer = new PubNub({
       subscribeKey: subKey,
