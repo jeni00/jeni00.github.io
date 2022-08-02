@@ -44,10 +44,10 @@ function setup() {
   background (color(201, 175, 196));
 
   textAlign(CENTER);
-  textSize(20);
+  textSize(60);
   fill(131, 123, 126);
-  text("How was your day?", windowWidth/2, 50);
-  text("Leave your message to UserB.", windowWidth/2, 80);
+  text("How was your day?", windowWidth/2, windowHeight/2+40);
+  text("Leave your message to UserB.", windowWidth/2, windowHeight/2);
 
   sendText = createInput();
   sendText.position((windowWidth/2) - 100, windowHeight *0.8);
@@ -62,10 +62,10 @@ function setup() {
   background (color(197, 220, 210));
 
   textAlign(CENTER);
-  textSize(20);
+  textSize(60);
   fill(131, 123, 126);
-  text("How was your day?", windowWidth/2, 50);
-  text("Leave your message to UserA.", windowWidth/2, 80);
+  text("How was your day?", windowWidth/2, windowHeight/2+40);
+  text("Leave your message to UserA.", windowWidth/2, windowHeight/2);
 
   sendText = createInput();
   sendText.position((windowWidth/2) - 100, windowHeight *0.8);
