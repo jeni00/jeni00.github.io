@@ -136,12 +136,7 @@ function drawMessages(messageHistory) {
 
   }
 
-}
-  // PubNub logic below
-function sendTheMessage() {
- 
-  sendText.value("");
-}
+
 
 function readIncoming(inMessage) {
   console.log(inMessage);
