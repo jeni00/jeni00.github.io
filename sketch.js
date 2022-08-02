@@ -24,7 +24,7 @@ console.log("NFC TAG 2 = " + NFC2);
 
 if (NFC1 != null) {
   
-  background(color(201, 175, 196));
+  background (color(201, 175, 196));
 
   textAlign(CENTER);
   textSize(20);
@@ -42,7 +42,7 @@ if (NFC1 != null) {
 
 } else if (NFC2 != null) {
   
-  background(color(197, 220, 210));
+  background (color(197, 220, 210));
 
   textAlign(CENTER);
   textSize(20);
