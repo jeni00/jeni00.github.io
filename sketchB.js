@@ -47,22 +47,12 @@ console.log("message = " + message);
    
     textAlign(CENTER);
     textSize(40);
-    if (noParams == false) {
-      sendTheMessage();
-    } else {
-      fetchMessages();
-      noStroke();
-      fill(201, 175, 196);
-      text("UserA", windowWidth*0.25, windowHeight/2);
-      fill(197, 220, 210);
-      text("UserB", windowWidth*0.75, windowHeight/2);
-
-    }
-    
-}
-  
-function draw() {
-
+    fetchMessages();
+    noStroke();
+    fill(201, 175, 196);
+    text("UserA", windowWidth*0.25, windowHeight/2);
+    fill(197, 220, 210);
+    text("UserB", windowWidth*0.75, windowHeight/2);
   
 }
 /*
