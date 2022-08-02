@@ -162,7 +162,7 @@ function drawMessages(messageHistory) {
       console.log(messageHistory[i]);
       textSize(20);
       textAlign(CENTER);
-      textColor(131, 123, 126);
+      fill(131, 123, 126);
       text(messageHistory[i].message.messageText, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+5);
       text(messageTime, (windowWidth/2) - 20, ((windowHeight - 20)*(i-1))+15);
 
@@ -176,7 +176,7 @@ function drawMessages(messageHistory) {
       console.log(messageHistory[i]);
       textSize(20);
       textAlign(CENTER);
-      textColor(131, 123, 126);
+      fill(131, 123, 126);
       text(messageHistory[i].message.messageText, (windowWidth/2) + 20, ((windowHeight - 20)*(i-1))+5);
       text(messageTime, (windowWidth/2) + 20, ((windowHeight - 20)*(i-1))+15);
 
