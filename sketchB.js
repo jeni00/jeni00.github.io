@@ -135,7 +135,7 @@ function drawMessages(messageHistory) {
   
 
   }
-
+}
 
 
 function readIncoming(inMessage) {
